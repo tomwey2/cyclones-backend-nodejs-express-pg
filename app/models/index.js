@@ -17,4 +17,5 @@ db.sequelize = sequelize;
 db.cyclones = require("./cyclones.model.js")(sequelize, Sequelize);
 db.seasons = require("./seasons.model.js")(sequelize, Sequelize);
 db.details = require("./details.model.js")(sequelize, Sequelize);
+db.cyclones_types = require("./cyclones_types.model.js")(sequelize, Sequelize);
 module.exports = db;

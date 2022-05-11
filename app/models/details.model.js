@@ -6,6 +6,9 @@ module.exports = (sequelize, Sequelize) => {
       cyclone_id: {
         type: Sequelize.STRING
       },
+      type_id: {
+        type: Sequelize.NUMBER
+      },
       data_date: {
         type: Sequelize.DATE
       },
@@ -19,13 +22,10 @@ module.exports = (sequelize, Sequelize) => {
         type: Sequelize.NUMBER
       },
       wind_max: {
-        type: Sequelize.STRING
+        type: Sequelize.NUMBER
       },
       gusts: {
-        type: Sequelize.STRING
-      },
-      type: {
-        type: Sequelize.STRING
+        type: Sequelize.NUMBER
       }
     },
     {timestamps: false}

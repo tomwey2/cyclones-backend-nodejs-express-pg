@@ -26,9 +26,10 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.get("/", (req, res) => {
   res.json({message: "Welcome to cyclones application."});
 });
-require("./app/routes/cyclones.routes")(app);
-require("./app/routes/seasons.routes")(app);
-require("./app/routes/details.routes")(app);
+app.use("/api/cyclones", require("./app/routes/cyclones.routes"));
+app.use("/api/seasons", require("./app/routes/seasons.routes"));
+app.use("/api/cyclones_types", require("./app/routes/cyclones_types.routes"));
+app.use("/api/details", require("./app/routes/details.routes"));
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {

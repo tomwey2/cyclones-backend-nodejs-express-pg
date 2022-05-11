@@ -1,5 +1,5 @@
 const express = require("express");
-const controller = require("../controllers/seasons.controller.js");
+const controller = require("../controllers/cyclones_types.controller.js");
 
 const router = express.Router();
 // Retrieve all seasons
